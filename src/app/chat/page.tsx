@@ -1,3 +1,5 @@
+//54:15  Error: Do not pass children as props. Instead, nest children between the opening and closing tags.  react/no-children-prop
+
 'use client';
 
 import { useState } from 'react';
@@ -51,7 +53,6 @@ const ChatGPT: React.FC = () => {
           <h3 className="text-xl font-semibold">Answer:</h3>
           <div className="overflow-x-auto">
             <ReactMarkdown
-              children={answer}
               remarkPlugins={[remarkGfm]}
               rehypePlugins={[rehypeRaw]}
               components={{
@@ -63,12 +64,12 @@ const ChatGPT: React.FC = () => {
                   <th {...props} className="border px-4 py-2 bg-gray-100 font-bold text-center" />
                 ),
                 td: ({ node, ...props }) => (
-                  <td
-                    {...props}
-                  />
+                  <td {...props} />
                 ),
               }}
-            />
+            >
+              {answer}
+            </ReactMarkdown>
           </div>
         </div>
       )}
