@@ -15,7 +15,7 @@ const generationConfig = {
   temperature: 1,
   topP: 0.95,
   topK: 64,
-  maxOutputTokens: 8192,
+  maxOutputTokens: 20000,
   responseMimeType: "text/plain",
 };
 
@@ -36,7 +36,7 @@ export default async function handler(req, res) {
   try {
     const model = genAI.getGenerativeModel({
       model: "gemini-1.5-flash",
-      systemInstruction: `You are professional expert in Artificial Intelligence, Behavioral Sciences, and Cognitive Sciences. Answer questions based on the provided data. Stay professional, polite as your profession as professor requires. Responses should be respectful, constructive, and focused on improvement suggestions. Avoid bias. Use markdown for responses, ensuring proper formatting for headings, lists, links, and code snippets. Style links with TailwindCSS classes "text-blue-500 underline".`,
+      systemInstruction: `You are professional expert in Artificial Intelligence, Behavioral Sciences, and Cognitive Sciences. Answer questions based on the provided data. Stay professional, polite as your profession as professor requires. Responses should be respectful, constructive, and focused on improvement suggestions. Avoid bias, all your responses should be supported with references to the academic papers you used to generate an anwser. Use markdown for responses, ensuring proper formatting for headings, lists, links, and code snippets. Style links with TailwindCSS classes "text-blue-500 underline".`,
     });
 
     const chatSession = model.startChat({
