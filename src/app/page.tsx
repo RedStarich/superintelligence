@@ -17,7 +17,7 @@ export default function LandingPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white">
       <header className="p-4 bg-slate-900">
         <nav className="container mx-auto flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold">AI Research Hub</Link>
+          <Link href="/" className="text-xl font-bold md:text-2xl">AI Research Hub</Link>
           <ul className="flex space-x-6">
             {['Papers', 'Topics', 'Chat', 'About', 'Contact'].map((item) => (
               <li key={item}>
