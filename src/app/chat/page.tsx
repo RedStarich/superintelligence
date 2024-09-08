@@ -66,9 +66,9 @@ const ChatGPT: React.FC = () => {
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeRaw]}
                   components={{
-                    a: ({ node, ...props }) => <a {...props} className="text-white underline" />,
-                    code: ({ node, ...props }) => <code {...props} className="bg-gray-700 p-1 rounded text-white" />,
-                    pre: ({ node, ...props }) => <pre {...props} className="bg-gray-700 p-2 rounded overflow-x-auto text-white" />,
+                    a: ({ node, ...props }) => <a {...props} className="text-black underline" />,
+                    code: ({ node, ...props }) => <code {...props} className="bg-gray-700 p-1 rounded text-black" />,
+                    pre: ({ node, ...props }) => <pre {...props} className="bg-gray-700 p-2 rounded overflow-x-auto text-black" />,
                     table: ({ node, ...props }) => <table {...props} className="border-collapse w-full text-white" />,
                     th: ({ node, ...props }) => <th {...props} className="border border-gray-600 px-4 py-2 bg-gray-700 font-bold text-center" />,
                     td: ({ node, ...props }) => <td {...props} className="border border-gray-600 px-4 py-2" />,
